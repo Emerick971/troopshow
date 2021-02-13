@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Partners from '../components/Partners';
 import ComponentAbout from '../components/ComponentAbout';
 import Footer from '../components/Footer';
-import '../pages/About.css';
 import NavBar from '../components/NavBar.js';
+import '../css/About.css';
 
 
 class About extends Component{

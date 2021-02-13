@@ -1,10 +1,11 @@
 .comingContainer {
     padding: 1em;
     background: #555;
-    width: 400px;
+    width: 350px;
     display: flex;
     align-items: center;
     border-radius: 10px;
+    margin: 15px !important;
 }
 
 .date, .artist {
@@ -23,18 +24,20 @@
 
 .comingContainer .showPicture {
     margin-right: 1em;
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 5px;
 }
 
 .containerDateShow {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+    justify-content:center;
     margin-bottom: 40px;
 }
 
 .comingShowTitle {
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }

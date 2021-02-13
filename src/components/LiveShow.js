@@ -11,7 +11,7 @@ class LiveShow extends React.Component {
                 <h2>ON LIVE</h2>
                 <div className="LiveContainer">
                     <div>
-                    <video width="320" height="240" controls>
+                    <video width="600" height="auto" controls>
                         <source src="movie.mp4" type="video/mp4"/>
                         <source src="movie.ogg" type="video/ogg"/>
                     </video>

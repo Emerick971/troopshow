@@ -1,5 +1,6 @@
 .nav {
     padding: 15px;
+    align-content: center;
 }
 
 .nav a {
@@ -16,7 +17,10 @@
     border: none;
 }
 .avatar img:hover, .logo img:hover  {
-    /*filter: invert(100%);*/
     filter: saturate(700%);
+}
 
+.baseline {
+margin-top:0.1rem;
+left:0.1rem;
 }

@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import '../css/Contact.css';
-import NavBar from '../components/NavBar.js';
-import { Container } from 'react-bootstrap';
+import '../css/ComponentContact.css'
+import { Container, Form } from 'react-bootstrap';
 
-class Contact extends Component {
-
+class ComponentContact extends Component{
     constructor(props) {
         super(props);
 
@@ -12,9 +10,14 @@ class Contact extends Component {
             inputFirstName: "",
             inputLastName: "",
             inputEmail: "",
-            inputText: ""
+            inputMessage: ""
         }
     } // initialisation du state
+
+    //buttonSearch = () => {
+    //this.props.onSearch(this.state.inputFirstName)
+    // Soulève un évènement et on passe une variable
+    //}
 
     handleFN = (event) => {
         //Récupère la valeur de l'input First Name
@@ -28,18 +31,17 @@ class Contact extends Component {
         //Récupère la valeur de l'input Email
         this.setState({ inputEmail: event.target.value });
     }
-    handleText = (event) => {
-        //Récupère la valeur de l'input Text
-        this.setState({ inputText: event.target.value });
+    handleMessage = (event) => {
+        //Récupère la valeur de l'input Message
+        this.setState({ inputMessage: event.target.value });
     }
 
     render() {
         return (
             <>
-                <NavBar />
                 <Container>
                     <div className="divPageConnexion">
-                        <h2>Sign up for a free account</h2>
+                        <h2>Hey, what's up ?</h2>
                         <div>
                             <input
                                 className="inputDivise"
@@ -64,13 +66,13 @@ class Contact extends Component {
                             placeholder="Email adress">
                         </input>
                         <textarea
-                            className="textareaEntier"
-                            value={this.state.inputText}
-                            onChange={this.handleText}
+                            className="inputTextarea"
+                            value={this.state.inputMessage}
+                            onChange={this.handleMessage}
                             type='text'
-                            placeholder="Your message ...">
-                        </textarea>
-                        <button onClick={this.buttonSearch}>Send</button>
+                            rows="5"
+                            placeholder="Write your message"/>
+                        <button onClick={this.buttonSearch}>Send now</button>
                     </div>
                 </Container>
             </>
@@ -78,4 +80,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
+export default ComponentContact;

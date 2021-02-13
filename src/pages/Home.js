@@ -13,11 +13,11 @@ function Home() {
             <NavBar />
 
             <Container>
-                <div>
-                    <h1>The Show must go on</h1>
-                </div>
                 <LiveShow />
-                <Slide />
+                <Slide title={'Replay'}/>
+                <Slide title={'Musical'}/>
+                <Slide title={'kids'}/>
+                <Slide title={'dance'}/>
                 <ListComingShows />
                 <Partners />
             </Container>

@@ -8,7 +8,7 @@ class ComingShows extends React.Component {
 
     render() {
         return(
-            <div className="container">
+            <div>
                 <div className="comingContainer">
                     <img className="showPicture" src={this.props.image} alt={this.props.artiste}/>
                         <div>
