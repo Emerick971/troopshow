@@ -10,14 +10,16 @@ class ComponentContact extends Component{
             inputFirstName: "",
             inputLastName: "",
             inputEmail: "",
-            inputMessage: ""
+            inputMessage: "",
+            messageSend:false
         }
     } // initialisation du state
 
-    //buttonSearch = () => {
-    //this.props.onSearch(this.state.inputFirstName)
-    // Soulève un évènement et on passe une variable
-    //}
+    buttonSearch(){
+        if(this.state.inputFirstName !="" && this.state.inputLastName !="" && this.state.inputEmail !="" && this.state.inputMessage !=""){
+            this.setState({messageSend:true});
+        }    
+    }
 
     handleFN = (event) => {
         //Récupère la valeur de l'input First Name
@@ -36,21 +38,27 @@ class ComponentContact extends Component{
         this.setState({ inputMessage: event.target.value });
     }
 
+    submitForm = (event) => {
+        event.preventefault();
+    }
+
     render() {
         return (
             <>
                 <Container>
-                    <div className="divPageConnexion">
+                    <form className="divPageConnexion" onSubmit={this.submitForm}>
                         <h2>Hey, what's up ?</h2>
                         <div>
-                            <input
+                            <input //input first name
+                                required={true}
                                 className="inputDivise"
                                 value={this.state.inputFirstName}
                                 onChange={this.handleFN}
                                 type='text'
                                 placeholder="First Name">
                             </input>
-                            <input
+                            <input //input last name
+                                required={true}
                                 className="inputDivise"
                                 value={this.state.inputLastName}
                                 onChange={this.handleLN}
@@ -58,22 +66,29 @@ class ComponentContact extends Component{
                                 placeholder="Last Name">
                             </input>
                         </div>
-                        <input
+                        <input //input email
                             className="inputEntier"
                             value={this.state.inputEmail}
                             onChange={this.handleEmail}
                             type='email'
-                            placeholder="Email adress">
+                            placeholder="Email adress"
+                          required={true}>
                         </input>
-                        <textarea
+                        <textarea //input message
+                            required
                             className="inputTextarea"
                             value={this.state.inputMessage}
                             onChange={this.handleMessage}
                             type='text'
                             rows="5"
-                            placeholder="Write your message"/>
-                        <button onClick={this.buttonSearch}>Send now</button>
-                    </div>
+                            placeholder="Write your message"
+                          required={true}/>
+                        <button type="submit" value='submit' onClick={(e) => this.buttonSearch(e)}>Send now</button>
+                    </form>
+                    {
+                        this.state.messageSend != false && 
+                        <p>Your message has been sent</p>
+                    }
                 </Container>
             </>
         )

@@ -15,7 +15,7 @@ class Footer extends Component{
                     </div>
                     <div>
                         <p>Support the local entertainment ARTISTS !</p>
-                        <Link to={'/connexion'}><Button variant="outline-light">Make a donation</Button></Link>
+                        <Link to={'/donation'}><Button variant="outline-light">Make a donation</Button></Link>
                     </div>
                 </Container>
             </div>

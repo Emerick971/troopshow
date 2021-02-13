@@ -24,3 +24,6 @@
 margin-top:0.1rem;
 left:0.1rem;
 }
+.nav .navbar-toggler:hover{
+    background-color: #4D94FF ;
+}

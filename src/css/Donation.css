@@ -1,0 +1,30 @@
+.DonationClass {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.DonationTitleContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donateForm .inputEntier {
+    width: 100%;
+    margin: 0;
+}
+
+.donateForm .inputDivise {
+    width: 50%;
+    margin: 5px 0 0 0;
+}
+.donateForm button{
+    margin-left: 40% ;
+}
+.donateForm img {
+    margin-left: 35% ;
+    height: 45px;
+    width: auto;
+    margin-top: 20px;
+}

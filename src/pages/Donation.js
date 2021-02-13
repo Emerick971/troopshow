@@ -1,23 +1,32 @@
 import React from 'react';
-import MyDonation from '../components/MyDonation';
+import NavBar from '../components/NavBar.js';
 import DonationDetails from '../components/DonationDetails';
-import DonationBill from '../components/DonationBill';
+import Footer from '../components/Footer';
+
+
+//CSS
+
+import '../css/Donation.css';
 
 class Donation extends React.Component {
+
+
 
     render() {
         return(
             <div>
-                <div>
-                    <h3>Title</h3>
+                <NavBar />
+                <div className="DonationTitleContainer">
+                    <h3>Donation in full transparency</h3>
                     <p>Lorem ipsum</p>
                 </div>
-                <MyDonation />
+                <div className="DonationClass">
                 <DonationDetails />
-                <DonationBill />
-            </div>
-        )
+               
+                </div>
+                <Footer/>
+            </div> 
+        )  
     }
 }
-
 export default Donation;

@@ -5,13 +5,28 @@ import '../css/VideoPage.css';
 import Footer from '../components/Footer';
 import{Button}  from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import SlideMovie from '../components/Slide';
 
-function VideoPage() {
+class VideoPage extends React.Component {
+constructor(props){
+    super(props);
+
+    this.state = {
+        slide:""
+    }
+}
+
+handleChange(slide){
+    alert(slide);
+   // this.setState({title: title, description: description});
+} 
+
+    render(){
     return (
         <div>
             <NavBar />
-
-            <Container>
+           
+            <Container onClickCard={this.handleChange}>
                 <div className="VideoContainer">
                     <video width="90%" height="auto" controls>
                         <source src="movie.mp4" type="video/mp4"/>
@@ -19,8 +34,8 @@ function VideoPage() {
                     </video>
                     <div>
                         <div className="VideoDescription">
-                            <h4>Title Show</h4>
-                            <p>Description Show<br/>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <h4>{this.state.title}</h4>
+                            <p>{this.state.description}</p>
                         </div>
                         <Link to={'/donation'}><Button variant="outline-light">Make a donation</Button></Link>
                     </div>
@@ -30,7 +45,7 @@ function VideoPage() {
         </div>
 
     )
-
+    }
 };
 
 export default VideoPage;
