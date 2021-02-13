@@ -1,15 +1,16 @@
 .divPageConnexion{
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
+    margin-top: 200px; 
 }
 
 button {
-    display: inline-block;
-    background-color: grey;
+    display: inline-block;                                                                        
+    background-color: #548EE4;
     color: white;
     border-radius: 5px;
     border: none;
@@ -23,22 +24,26 @@ button {
 
 button:hover {
     background-color: white;
-    color: grey;
+    color: #548EE4;
     border: 1px solid grey;
 }
 
 .inputDivise{
-    margin:10px;
-    width: 40%;
-    height: 20px;
+    
+    width: 175px;
+    height: 35px;
     padding: 5px;
+    margin: 0 5px 0 5px;
+    border-radius: 5px;
 }
 
 .inputEntier{
     margin:10px;
-    width: 40%;
-    height: 20px;
+    width: 360px;
+    height: 35px;
     padding: 5px;
+    margin-bottom: 0;
+    border-radius: 5px;
 }
 
 .inputCheckbox{
@@ -49,4 +54,7 @@ button:hover {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.form-check {
+    margin-top: 15px;
 }

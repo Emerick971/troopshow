@@ -1,0 +1,15 @@
+.LiveContainer {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.TitleLive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 2rem;
+}
+
+.LiveDescription {
+    margin-left: 2rem;
+}

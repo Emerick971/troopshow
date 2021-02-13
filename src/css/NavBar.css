@@ -1,3 +1,7 @@
+.nav {
+    padding: 15px;
+}
+
 .nav a {
     text-decoration: none;
     color: white;
@@ -6,6 +10,7 @@
 .nav a:hover {
     border-bottom: #4D94FF 2px solid;
     cursor: pointer;
+    font-weight: bold;
 }
 .avatar a:hover, .logo a:hover  {
     border: none;

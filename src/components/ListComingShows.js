@@ -1,6 +1,7 @@
 import React from 'react';
 import ComingShows from './ComingShows';
 import image from '../images/telechargement.jpeg';
+import { Container } from 'react-bootstrap';
 
 
 const coming = [
@@ -35,13 +36,18 @@ const coming = [
 ]
 
 const ListComingShows = () => (
-    <div className="containerDateShow">
-        {
-            coming.map(item => (
-                <ComingShows image={item.image} date={item.date} artiste={item.artiste} type1={item.type1} type2={item.type2} />
-            ))}
-    </div>
-    
+    <Container>
+        <div>
+            <h2 className="comingShowTitle">Coming Show</h2>
+            <div className="containerDateShow">
+
+                {
+                    coming.map(item => (
+                        <ComingShows image={item.image} date={item.date} artiste={item.artiste} type1={item.type1} type2={item.type2} />
+                    ))}
+            </div>
+        </div>
+        </Container>
 );
 
 export default ListComingShows;

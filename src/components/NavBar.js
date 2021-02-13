@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
+import Contact from './Contact';
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 import Avatar from '../images/Avatar.svg';
@@ -24,10 +25,10 @@ function NavBar() {
                <Nav className="mr-auto">
                    <Nav.Item><Link to={'/donation'}>Donation</Link></Nav.Item>
                    <Nav.Item><Link to={'/about'}>About</Link></Nav.Item>
-                   <Nav.Item><Link to={'/contact'}>Contact</Link></Nav.Item>
+                   <Nav.Item><Link to={'/contact'} component={Contact}>Contact</Link></Nav.Item>
                </Nav>
            </Navbar.Collapse>
-           <Nav.Item className="avatar"><Link to={'/conexion'}><img  src={Avatar}/></Link></Nav.Item>
+           <Nav.Item className="avatar"><Link to={'/connexion'}><img  src={Avatar}/></Link></Nav.Item>
        </Navbar>
     )
 }

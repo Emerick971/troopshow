@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import '../css/Connexion.css';
+import '../css/Contact.css';
 import NavBar from '../components/NavBar.js';
-import { Container, Form } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
-class Connexion extends Component {
+class Contact extends Component {
 
     constructor(props) {
         super(props);
@@ -12,14 +12,9 @@ class Connexion extends Component {
             inputFirstName: "",
             inputLastName: "",
             inputEmail: "",
-            inputPassword: ""
+            inputText: ""
         }
     } // initialisation du state
-
-    //buttonSearch = () => {
-    //this.props.onSearch(this.state.inputFirstName)
-    // Soulève un évènement et on passe une variable
-    //}
 
     handleFN = (event) => {
         //Récupère la valeur de l'input First Name
@@ -33,14 +28,13 @@ class Connexion extends Component {
         //Récupère la valeur de l'input Email
         this.setState({ inputEmail: event.target.value });
     }
-    handlePassword = (event) => {
-        //Récupère la valeur de l'input Password
-        this.setState({ inputPassword: event.target.value });
+    handleText = (event) => {
+        //Récupère la valeur de l'input Text
+        this.setState({ inputText: event.target.value });
     }
 
     render() {
         return (
-
             <>
                 <NavBar />
                 <Container>
@@ -69,17 +63,14 @@ class Connexion extends Component {
                             type='email'
                             placeholder="Email adress">
                         </input>
-                        <input
-                            className="inputEntier"
-                            value={this.state.inputPassword}
-                            onChange={this.handlePassword}
-                            type='password'
-                            placeholder="Create password">
-                        </input>
-                        <Form.Group controlId="formBasicCheckbox">
-                            <Form.Check type="checkbox" label="I'm an artist" />
-                        </Form.Group>
-                        <button onClick={this.buttonSearch}>Register</button>
+                        <textarea
+                            className="textareaEntier"
+                            value={this.state.inputText}
+                            onChange={this.handleText}
+                            type='text'
+                            placeholder="Your message ...">
+                        </textarea>
+                        <button onClick={this.buttonSearch}>Send</button>
                     </div>
                 </Container>
             </>
@@ -87,4 +78,4 @@ class Connexion extends Component {
     }
 }
 
-export default Connexion;
+export default Contact;

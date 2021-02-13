@@ -1,0 +1,18 @@
+.divPartnersIMG img{
+    width: 15%;
+    border-radius: 15px;
+    margin: 20px;
+}
+
+.divPartners{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.divPartnersIMG{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
