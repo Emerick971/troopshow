@@ -1,0 +1,179 @@
+/* CSS Sylvain
+/* Slide
+
+
+/* Style Slider images */
+.container {
+    margin: 0 auto;
+    padding: 0px 40px 40px 40px;
+    width: 1600px;
+    background-color: rgb(90, 74, 74);
+  }
+
+
+  .effect {
+    position: relative;
+    width:100%;
+}
+
+.effect:hover .overlay {
+  height: 100%;
+}
+
+.imageSlide {
+    display: block;
+    width: inherit;
+    height: auto;
+    border-radius: 0.4rem;
+    margin-top: 2%;
+  }
+    
+  .marvelImage a:focus {
+    outline: none;
+  }
+    
+  /*hover slide Character + comic page Home */
+  .transition {
+    width: calc(18rem / 1.2);
+    border-radius: 0.4rem;
+  }
+    
+  .transition:hover {
+    box-shadow: 0px 0px 0px 0.125rem #ffffff;
+    transform: scale(1.05);
+    transition: 0.5s linear !important;
+    opacity: 1;
+  }
+  
+  .titleImage {
+      margin-bottom: 0;
+  }
+  
+  /* Bande titre slider Character and pages Character */
+
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: inherit;
+    height: auto;
+    overflow: hidden;
+    border-radius: 0.4rem;
+    transition: .5s ease;
+  }
+
+  .text {
+    color: white;
+    font-size: 0.6rem;
+    position: absolute;
+    top: 10%;
+    bottom: -80%;
+    left: 15%;
+    right: 15%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: scale(1.1);
+    text-align: left;
+  }
+  
+  .titleSlider {
+    color: white;
+  }
+  
+  /* carousel Slider Slick */
+  .carouselSlider {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+  
+.slick-list {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+  
+  .slick-disabled {
+    visibility: hidden;
+  }
+  
+  .slick-next {
+    right: -1rem;
+  }
+  
+  .slick-prev {
+    left: -0.75rem;
+
+  }
+  
+  .slick-prev,
+  .slick-next {
+    color: transparent;
+    position: absolute;
+    z-index: 1;
+    outline: none;
+    height: 75%;
+    width: 2rem;
+    transition: opacity 0.25s ease-in-out, background-color 0.25s ease-in-out;
+  }
+  
+  .slick-next:before {
+    opacity: 0.75;
+    content: URL("../images/next.svg");
+  }
+  
+  .slick-prev:before {
+    opacity: 0.75;
+    content: url("../images/prev.svg");
+  }
+  
+ 
+  
+  .slick-slide,
+  .slick-active {
+    display: block;
+    width: 20.5rem;
+  }
+  
+  
+  /* Titre slider and pages */
+  .titleSlider {
+    font-size: 1.3rem;
+  }
+    
+  /*Media Query*/
+  @media (max-width: 768px) {
+   .titleName {
+      font-size: 10px;
+    }
+  
+    .heroesCard {
+      width: 100px;
+      height: 50px;
+      margin: 20px;
+      justify-content: center;
+    }
+  
+    .heroesCard:hover {
+      border: solid darkgrey 2px;
+      cursor: pointer;
+    }
+  }
+  
+  @media only screen and (max-width: 576px) {
+    .marvelCatImg {
+      height: 30%;
+    }
+  
+    .slick-slide {
+      padding: 5%;
+    }
+  
+    .slick-prev,
+    .slick-next {
+      height: 80%;
+      width: 40px;
+    }
+    .titleSlider {
+      font-size: calc(28px / 1.3);
+    }
+  }
+  
