@@ -1,0 +1,17 @@
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}
+.nav a:hover {
+    border-bottom: #4D94FF 2px solid;
+    cursor: pointer;
+}
+.avatar a:hover, .logo a:hover  {
+    border: none;
+}
+.avatar img:hover, .logo img:hover  {
+    /*filter: invert(100%);*/
+    filter: saturate(700%);
+
+}
