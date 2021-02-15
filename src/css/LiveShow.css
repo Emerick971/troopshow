@@ -13,3 +13,14 @@
 .LiveDescription {
     margin-left: 2rem;
 }
+
+@media (max-width: 1024px) {
+    .LiveContainer {
+        flex-direction: column;
+              
+    }
+    .LiveDescription {
+        margin-left: 0;
+        margin-bottom: 2rem; 
+    }
+}

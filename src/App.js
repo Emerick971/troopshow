@@ -19,7 +19,7 @@ function App() {
         <Route path='/contact' component={Contact}/>
         <Route path='/donation' component={Donation}/>
         <Route path='/connexion' component={Connexion}/>
-        <Route path='/video' component={VideoPage}/>
+        <Route path='/video/:title' component={VideoPage}/>
       </Switch>
 
     </div>

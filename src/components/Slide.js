@@ -96,28 +96,7 @@ const slides = [
 
 
 export default class SlideMovie extends Component {
-    //Function qui met à jour les states et ouvre la modal
-    constructor(props){
-        super(props);
-        this.state = {
-            title1 :'',
-            description: ''
-        }
-    }
-   
-    /*Function in test and validation
-    clickCard(title1, description) {
-         this.setState({title1: title1, description: description});
-
-        onChange={() => this.clickCard(title1, description)} 
-        onClick={() => this.handleVideo()}
-     };*/
-
-     handleVideo(){
-         this.props.onClickVideo(this.state.title1, this.state.description);
-     }
-
-     //
+ 
     render() {
 
         //paramètres du slider
@@ -132,6 +111,37 @@ export default class SlideMovie extends Component {
             centerPadding: '5px',
             draggable: false,
             classNames: 'carouselSlider',
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 2,
+                        infinite: false,
+                        dots: false,
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1,
+                        //centerPadding: '10px',
+                        initialSlide: 0,
+                        centerMode: true
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        centerPadding: '10px',
+                        infinite: false,
+                        dots: false
+                    }
+                }
+            ]
         };
 
         //Sur click de la vignette on initialise la function clickCard avec des paramètres
@@ -147,7 +157,7 @@ export default class SlideMovie extends Component {
                             {
                                 slides.map(({title1, image, description}) => (
                                     <div className='effect'>
-                                        <Link to={'/video'}>
+                                        <Link to={'/video/'+title1}>
                                             <div className='transition'                                            >
                                                 <img src={image} alt={title1} className='imageSlide' />
                                                 <div className='overlay'>
