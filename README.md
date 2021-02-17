@@ -15,13 +15,13 @@ TroopShow is a non profit platform in order to help the local performing artists
 
 ### TARGETS :
 - Freelance performing artists / local artist
-- People interested in support their community and or/ the performing arts
+- People interested in support their community and/or the performing arts
 - Companies wishing to support the platform
 
 ### STRATEGIC CHOICES :
 - React.JS
 - Responsive via BOOTSTRAP/REACT 
-- Css for the style
+- CSS for the style
 - SCRUM methode
 
 ## Structure
