@@ -1,7 +1,7 @@
 # ![TroopShow logo](https://raw.githubusercontent.com/sgibaud/troopshow/master/public/imgagesInfoTs/Logoneg.svg)
 
 This project was create by [Clara Josse](https://github.com/ClaraJosse), [Mayte Valdez](https://github.com/mayte-valdez), [Emerick Martial](https://github.com/Emerick971) and [Sylvain Gibaud](https://github.com/sgibaud).   
-This was the result of 24h codding, durring a intern Hackathon organized by the [Wild Code School](https://www.wildcodeschool.com/) in parnership with [Twilio](https://www.twilio.org/) as a part of Remote front-end developer training course.
+This was the result of 24h codding, during a intern Hackathon organized by the [Wild Code School](https://www.wildcodeschool.com/) in parnertship with [Twilio](https://www.twilio.org/) as a part of Remote front-end developer training course.
 
 
 ## About the projet
